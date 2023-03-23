@@ -117,7 +117,7 @@ const Todos = () => {
             <MdOutlineArrowBackIos size={24} /> <HiHome size={24} />
           </Link>
         </div>
-        <div className="container mx-auto max-w-[800px] h-[90%] flex flex-col items-center p-4 shadow-sm bg-white box-border">
+        <div className="container mx-auto max-w-[800px] h-[85%] flex flex-col items-center p-4 shadow-sm bg-white box-border">
           <div className="flex flex-col justify-between w-full h-full box-border">
           <div className="flex flex-col h-[90%]">
             <h2 className="text-2xl font-bold">Task List</h2>
