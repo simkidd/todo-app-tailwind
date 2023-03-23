@@ -13,7 +13,7 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
           .sort((a, b) => (a.id > b.id ? 1 : -1))
           .map((task, i) => {
             return (
-              <li key={i} className="w-full flex flex-col">
+              <div key={i} className="w-full flex flex-col">
                 <div>
                   <div className={task.isDone ? "text-red-600" : ""}>
                     <span className="px-2">{i + 1}</span>
@@ -54,7 +54,7 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
                 <div>
                   <span className="text-[14px] w-full">{task.createdAt}</span>
                 </div>
-              </li>
+              </div>
             );
           })}
     </>

@@ -111,16 +111,17 @@ const Todos = () => {
 
   return (
     <div className="todo-bg w-full h-screen">
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="flex items-center w-full md:mb-8 mb-4 pl-4 md:pl-8">
+      <div className="flex flex-col items-center w-full h-full">
+        <div className="flex items-center w-full md:py-8 py-4 pl-4 md:pl-8">
           <Link to="/" className="flex items-center gap-1 text-white">
             <MdOutlineArrowBackIos size={24} /> <HiHome size={24} />
           </Link>
         </div>
-        <div className="container mx-auto max-w-[800px] md:h-[85vh] h-[90vh] flex flex-col items-center p-4 shadow-sm bg-white box-border">
-          <div className="flex flex-col justify-between w-full h-full">
-          <div className="flex flex-col">
+        <div className="container mx-auto max-w-[800px] h-[90%] flex flex-col items-center p-4 shadow-sm bg-white box-border">
+          <div className="flex flex-col justify-between w-full h-full box-border">
+          <div className="flex flex-col h-[90%]">
             <h2 className="text-2xl font-bold">Task List</h2>
+            <div className="pb-4">
             {updateTodo && updateTodo ? (
               <UpdateTodo
                 changeTask={changeTask}
@@ -136,19 +137,20 @@ const Todos = () => {
                 handleSubmit={handleSubmit}
               />
             )}
+            </div>
             {todos && todos.length ? "" : <h2> No task found...</h2>}
 
-            <ul className="w-full h-[60vh] overflow-y-scroll">
+            <div className="w-full overflow-y-scroll">
               <TodoList
                 todos={todos}
                 deleteTask={deleteTask}
                 setUpdateTodo={setUpdateTodo}
                 markCompleted={markCompleted}
               />
-            </ul>
+            </div>
 
           </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 py-4">
               <button
                 onClick={() => handleDeleteAll(todos)}
                 className="flex items-center py-3 px-6 bg-purple-500 text-white"
