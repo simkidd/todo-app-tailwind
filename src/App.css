@@ -9,6 +9,12 @@
   li{
     @apply cursor-pointer
   }
+  ::-webkit-scrollbar{
+    @apply w-[5px];
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply bg-purple-500
+  }
 }
 
 .todo-bg{

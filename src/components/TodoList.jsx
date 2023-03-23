@@ -13,16 +13,26 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
           .sort((a, b) => (a.id > b.id ? 1 : -1))
           .map((task, i) => {
             return (
-              <div key={i} className="w-full flex flex-col">
-                <div>
-                  <div className={task.isDone ? "text-red-600" : ""}>
-                    <span className="px-2">{i + 1}</span>
-                    <Link>
-                      <p className="text-[16px] w-full">{task.title}</p>
-                    </Link>
+              <div key={i} className="w-full flex flex-col px-2">
+                <div className="flex items-start justify-between w-full">
+                  <div
+                    className={
+                      task.isDone
+                        ? "text-red-600 flex md:w-[70%] w-[50%] items-start gap-2 box-border"
+                        : "flex md:w-[70%] w-[50%] items-start gap-2 box-border"
+                    }
+                  >
+                    <div>
+                      <span className="px-2">{i + 1}</span>
+                    </div>
+                    <div className="w-[100%] break-words">
+                      <Link className="flex-wrap hover:underline">
+                        <p className="text-[16px] ">{task.title}</p>
+                      </Link>
+                    </div>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2">
                     <button className="bg-purple-500 text-white p-3">
                       <AiFillCheckCircle
                         size={24}
@@ -52,7 +62,15 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
                   </div>
                 </div>
                 <div>
-                  <span className="text-[14px] w-full">{task.createdAt}</span>
+                  <span
+                    className={
+                      task.isDone
+                        ? "text-red-600 text-[14px] w-full ml-8"
+                        : "text-[14px] text-gray-500 w-full ml-8"
+                    }
+                  >
+                    {task.createdAt}
+                  </span>
                 </div>
               </div>
             );

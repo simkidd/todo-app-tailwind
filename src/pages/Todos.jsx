@@ -120,7 +120,7 @@ const Todos = () => {
         <div className="container mx-auto max-w-[800px] h-[85%] flex flex-col items-center p-4 shadow-sm bg-white box-border">
           <div className="flex flex-col justify-between w-full h-full box-border">
           <div className="flex flex-col h-[90%]">
-            <h2 className="text-2xl font-bold">Task List</h2>
+            <h2 className="text-2xl font-bold pb-4">Task List</h2>
             <div className="pb-4">
             {updateTodo && updateTodo ? (
               <UpdateTodo
@@ -128,6 +128,7 @@ const Todos = () => {
                 updateTask={updateTask}
                 updateTodo={updateTodo}
                 cancelUpdate={cancelUpdate}
+                handleSubmit={handleSubmit}
               />
             ) : (
               <AddTodo
