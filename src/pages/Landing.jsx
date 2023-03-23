@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {HiArrowNarrowRight} from 'react-icons/hi'
+import {HiArrowNarrowRight} from 'react-icons/hi';
+import Meta from "../components/Meta";
 
 const Landing = () => {
   return (
     <div className="w-full h-screen">
+    <Meta title={'Go Task'} />
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="container mx-auto max-w-[1000px]  grid md:grid-cols-2">
           <div className="w-full flex">

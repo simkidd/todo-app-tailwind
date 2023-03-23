@@ -33,7 +33,7 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
                   </div>
 
                   <div className="flex gap-2">
-                    <button className="bg-purple-500 text-white p-3">
+                    <button className="bg-green-500 text-white p-3">
                       <AiFillCheckCircle
                         size={24}
                         onClick={() => markCompleted(task.id)}
@@ -48,14 +48,14 @@ const TodoList = ({ todos, deleteTask, setUpdateTodo, markCompleted }) => {
                             isDone: task.isDone ? true : false,
                           })
                         }
-                        className="bg-purple-500 text-white p-3"
+                        className="bg-yellow-500 text-white p-3"
                       >
                         <FaPencilAlt size={24} />
                       </button>
                     )}
                     <button
                       onClick={() => deleteTask(task.id)}
-                      className="bg-purple-500 text-white p-3"
+                      className="bg-red-500 text-white p-3"
                     >
                       <MdDelete size={24} />
                     </button>

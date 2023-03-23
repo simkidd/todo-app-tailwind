@@ -5,6 +5,7 @@ import TodoList from "../components/TodoList";
 import UpdateTodo from "../components/UpdateTodo";
 import { HiHome } from "react-icons/hi";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import Meta from "../components/Meta";
 
 const Todos = () => {
   const [todos, setTodos] = useState(() => {
@@ -111,6 +112,7 @@ const Todos = () => {
 
   return (
     <div className="todo-bg w-full h-screen">
+    <Meta title={'Go Task | Todos'} />
       <div className="flex flex-col items-center w-full h-full">
         <div className="flex items-center w-full md:py-8 py-4 pl-4 md:pl-8">
           <Link to="/" className="flex items-center gap-1 text-white">
