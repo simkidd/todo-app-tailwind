@@ -150,7 +150,7 @@ const Todos = () => {
             </div>
 
           </div>
-            <div className="flex gap-8 py-4">
+            <div className="flex items-center justify-between py-4">
               <button
                 onClick={() => handleDeleteAll(todos)}
                 className="flex items-center py-3 px-6 bg-purple-500 text-white"

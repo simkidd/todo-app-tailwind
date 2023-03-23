@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {HiArrowNarrowRight} from 'react-icons/hi'
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const Landing = () => {
   return (
@@ -13,7 +13,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="flex flex-col px-4 gap-8">
+          <div className="flex flex-col px-4 gap-8 items-center">
             <h1 className="font-bold inline-block text-4xl text-center md:text-left">
               Welcome to Go Task
             </h1>
@@ -22,11 +22,12 @@ const Landing = () => {
               voluptatum optio ut harum quisquam obcaecati impedit culpa!
               Laudantium, officiis praesentium?
             </p>
-            <Link to="todos">
-              <button className="text-white flex items-center bg-purple-500 py-3 px-6">Let's Start
-              <HiArrowNarrowRight className="ml-3" />
-              </button>
-            </Link>
+            <button className="text-white flex items-center bg-purple-500 py-3 px-6">
+              <Link to="todos" className="w-full ">
+              Let's Start
+                <HiArrowNarrowRight className="ml-3" />
+              </Link>
+            </button>
           </div>
         </div>
       </div>
